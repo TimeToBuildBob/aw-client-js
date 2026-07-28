@@ -224,7 +224,10 @@ export class AWClient {
             {
                 method: "POST",
                 signal: this.controller.signal,
-                headers: { "Content-Type": "application/json", ...this._authHeaders() },
+                headers: {
+                    "Content-Type": "application/json",
+                    ...this._authHeaders(),
+                },
                 body: JSON.stringify(data),
             },
             this.timeout,
