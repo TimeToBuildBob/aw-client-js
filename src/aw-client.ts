@@ -200,7 +200,7 @@ export class AWClient {
         this.queryCache = {};
     }
 
-    private _authHeaders(): HeadersInit {
+    private _authHeaders(): Record<string, string> {
         return this.token ? { Authorization: `Bearer ${this.token}` } : {};
     }
 
